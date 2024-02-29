@@ -1,10 +1,12 @@
-const { Router } = require("express");
+const express = require("express");
 const { getController, postController, putController, deleteController } = require("../controllers/userController");
-const userRouter = Router();
+const postAutenticador = require("../middleware/postAutenticador");
+const postCatchError = require("../middleware/postCatchError");
+const userRouter = express.Router();
 
-userRouter.get("/", getController)
-userRouter.post("/", postController)
+userRouter.get("/user", getController)
+userRouter.post("/user", postAutenticador, postController, postCatchError)
 userRouter.put("/", putController)
-userRouter.delete("/", deleteController)
+userRouter.delete("/user/:email", deleteController)
 
 module.exports = userRouter

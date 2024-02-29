@@ -130,7 +130,7 @@ dataBase = {
   - Crea un nuevo objetos con los datos recibidos del usuario.
   - Agrega el objeto creado al array "allUsers".
   - Responde con status 200 y el objeto creado.
-  - Extra Credit: Puedes validar formato del email y largo de la contraseña.
+  - Extra Credit: Puedes validar formato del email y largo de la contraseña. 
 
 ## 8. Resto del CRUD de /user
 

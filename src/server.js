@@ -12,6 +12,6 @@ server.use(cors());
 server.use(morgan("dev"));
 
 server.use("/", ruter)
-server.use("/user", userRouter)
+server.use("/", userRouter)
 
 module.exports = server;
